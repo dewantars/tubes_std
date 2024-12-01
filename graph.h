@@ -14,13 +14,14 @@ typedef struct Vertex *adrVertex;
 typedef struct Edge *adrEdge;
 
 struct Edge {
-    char destVertexID;
-    int weight;
+    string namaStasiun;
+    int jarak;
+    int harga;
     adrEdge nextEdge;
 };
 
 struct Vertex {
-    char idVertex;
+    string nama;
     adrVertex nextVertex;
     adrEdge firstEdge;
 };
