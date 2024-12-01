@@ -30,12 +30,12 @@ struct Graph {
     adrVertex firstVertex;
 };
 
-void createVertex_103022300071(char newVertexID, adrVertex &v);
-void addVertex_103022300071(Graph &G, char newVertexID);
-void initGraph_103022300071(Graph &G);
-void buildGraph_103022300071(Graph &G);
-void createEdge_103022300071(char newdestVertexID, int newweight, adrEdge &v);
-void addEdge_103022300071(adrVertex &L, char newdestVertexID, int newweight);
+void createVertex(char newVertexID, adrVertex &v);
+void addVertex(Graph &G, char newVertexID);
+void initGraph(Graph &G);
+void buildGraph(Graph &G);
+void createEdge(char newdestVertexID, int newweight, adrEdge &v);
+void addEdge(adrVertex &L, char newdestVertexID, int newweight);
 void print(Graph L);
 
 #endif // GRAPH_H_INCLUDED
