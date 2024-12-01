@@ -1,24 +1,24 @@
 #include "graph.h"
 
-void createVertex_103022300071(char newVertexID, adrVertex &v) {
+void createVertex(char newVertexID, adrVertex &v) {
     v = new Vertex;
     idVertex(v) = newVertexID;
     nextVertex(v) = NULL;
     firstEdge(v) = NULL;
 }
 
-void createEdge_103022300071(char newdestVertexID, int newweight, adrEdge &v){
+void createEdge(char newdestVertexID, int newweight, adrEdge &v){
     v = new Edge;
     destVertexID(v) = newdestVertexID;
     weight(v) = newweight;
     nextEdge(v) = NULL;
 }
 
-void initGraph_103022300071(Graph &G) {
+void initGraph(Graph &G) {
     firstVertex(G) = NULL;
 }
 
-void addVertex_103022300071(Graph &G, char newVertexID) {
+void addVertex(Graph &G, char newVertexID) {
     adrVertex newVertex;
     createVertex_103022300071(newVertexID, newVertex);
 
@@ -33,7 +33,7 @@ void addVertex_103022300071(Graph &G, char newVertexID) {
     }
 }
 
-void addEdge_103022300071(adrVertex &L, char newdestVertexID, int newweight){
+void addEdge(adrVertex &L, char newdestVertexID, int newweight){
     adrEdge A;
     createEdge_103022300071(newdestVertexID, newweight, A);
     if (firstEdge(L) == NULL){
@@ -47,7 +47,7 @@ void addEdge_103022300071(adrVertex &L, char newdestVertexID, int newweight){
     }
 }
 
-void buildGraph_103022300071(Graph &G) {
+void buildGraph(Graph &G) {
 
     char newVertexID;
     cout << "Masukkan ID simpul (huruf A-Z). Ketikkan karakter lain selain huruf untuk berhenti." << endl;
